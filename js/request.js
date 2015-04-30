@@ -66,9 +66,9 @@ function refresh(){
  
  
 function alloff(){
- 	if(confirm('All Devices off?')){
+ 	//if(confirm('All Devices off?')){
 		request('alloff.php', 'GET', {s: ""}, function(){ $('#lights').load('lights.php'); } );
-	}
+	//}
 }
 
 
