@@ -36,7 +36,7 @@ if($what=="device"){
 
 	if($opp=="insert"){
 		dbconnect();
-		$sql_device_insert= "INSERT INTO pi_devices ( id,room_id,device,letter,code,status,sort,aktiv ) values (  '', '".$room_id."', '".utf8_decode($device_name)."', '".$device_letter."', '".$device_code."', '0', '".$device_sort."', '".$device_aktiv."' )";
+		$sql_device_insert= "INSERT INTO pi_devices ( room_id,device,letter,code,status,sort,aktiv ) values (  '".$room_id."', '".utf8_decode($device_name)."', '".$device_letter."', '".$device_code."', '0', '".$device_sort."', '".$device_aktiv."' )";
 		mysqli_query(dbconnect(), $sql_device_insert);
 	}elseif($opp=="update"){
 		dbconnect();
@@ -59,7 +59,7 @@ if($what=="device"){
 
 	if($opp=="insert"){
 		dbconnect();
-		$sql_room_insert= "INSERT INTO pi_rooms ( id,room ) values (  '', '".utf8_decode($room_name)."' )";
+		$sql_room_insert= "INSERT INTO `pi_rooms` ( `room` ) values (  '".utf8_decode($room_name)."' )";
 		mysqli_query(dbconnect(), $sql_room_insert);
 	}elseif($opp=="update"){
 		dbconnect();
