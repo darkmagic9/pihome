@@ -65,18 +65,18 @@ function toggle_add_rooms(){
 
 
 function del_device(wid){
-	if(confirm('Delete Device?')){
+	//if(confirm('Delete Device?')){
 		var quest = "?w=device&o=delete&wid=" + wid;
 		request('request.php', 'GET', quest, function(){ $('#lights').load('lights.php'); } );
-	}
+	//}
 }
 
 
 function del_room(wid){
-	if(confirm('Delete Room?')){
+	//if(confirm('Delete Room?')){
 		var quest = "?w=room&o=delete&wid=" + wid;
 		request('request.php', 'GET', quest, function(){ $('#homerooms').load('rooms.php'); } );
-	}
+	//}
 }
 
 
