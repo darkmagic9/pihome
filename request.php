@@ -44,6 +44,7 @@ if($_GET["s"]){
 	$co = $code['code'];
 
 	#echo "sudo /home/div/rcswitch-pi/send ".$co." ".$letter." ".$status;
-	shell_exec('sudo /home/div/rcswitch-pi/send '.$co.' '.$letter.' '.$status.' ');
+	#shell_exec('sudo /home/div/rcswitch-pi/send '.$co.' '.$letter.' '.$status.' ');
+	shell_exec("python /home/pi/programming/led.py")
 }
 ?>

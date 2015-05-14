@@ -138,7 +138,8 @@ function allOff()
                 $status = "0";
         }
         $co = $getallon['code'];
-        shell_exec('sudo /home/div/rcswitch-pi/send '.$co.' '.$letter.' '.$status.' ');        
+        # shell_exec('sudo /home/div/rcswitch-pi/send '.$co.' '.$letter.' '.$status.' '); 
+        shell_exec("/usr/bin/python  /home/pi/programming/led.py");        
 	}	
 }
 
